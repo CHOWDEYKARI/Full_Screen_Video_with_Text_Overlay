@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Full Screen Video with Text Overlay</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-header {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+        .video-header video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .header-text h1 {
+            font-weight: 400;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0;
+        }
+        .header-text span {
+            display: block;
+            font-weight: 900;
+            font-size: 6rem;
+        }
+        .description {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background-color: rgba(0, 128, 128, 0.7);
+            padding: 1rem 2rem;
+            max-width: 90%;
+            text-align: center;
+        }
+        .description p {
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header class="video-header">
+        <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop muted playsinline></video>
+        <div class="header-text">
+            <h1>
+                Exploring
+                <span>The Sea</span>
+            </h1>
+        </div>
+        <div class="description">
+            <p>This is an example of a full screen video being shown as a background at any screen size. This is accomplished with giving video absolute positioning, full viewport width and height, and using 'object-fit: cover;'</p>
+        </div>
+    </header>
+</body>
+</html>
